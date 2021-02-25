@@ -3,23 +3,23 @@ import "./style.css";
 
 function EmployeeRow(props) {
   return (
-    <div className="row">
-      <div className="col-md-1">
+    <tr>
+      <td>
         <img src={props.employee.image} />
-      </div>
-      <div className="col-md-2">
+      </td>
+      <td>
         <p>{props.employee.name}</p>
-      </div>
-      <div className="col-md-3">
+      </td>
+      <td>
         <p>{props.employee.phone}</p>
-      </div>
-      <div className="col-md-4">
+      </td>
+      <td>
         <p>{props.employee.email}</p>
-      </div>
-      <div className="col-md-2">
+      </td>
+      <td>
         <p>{props.employee.dob}</p>
-      </div>
-    </div>
+      </td>
+    </tr>
   );
 }
 
