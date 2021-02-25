@@ -14,6 +14,30 @@
     "phone": "0000000000",
     "email": "rkageyama@hotmail.horse",
     "dob": "03/04/1989"
+  },
+  {
+    "id": 3,
+    "name": "AAAAAAAAA Ritsu",
+    "image": "https://static.wikia.nocookie.net/mob-psycho-100/images/a/a6/Ritsu_anime.png/revision/latest/scale-to-width-down/150?cb=20160712054631",
+    "phone": "0000000000",
+    "email": "rkageyama@hotmail.horse",
+    "dob": "03/04/1989"
+  },
+  {
+    "id": 4,
+    "name": "ZZZZZZZZZZZZZZZ Ritsu",
+    "image": "https://static.wikia.nocookie.net/mob-psycho-100/images/a/a6/Ritsu_anime.png/revision/latest/scale-to-width-down/150?cb=20160712054631",
+    "phone": "0000000000",
+    "email": "rkageyama@hotmail.horse",
+    "dob": "03/04/1989"
+  },
+  {
+    "id": 5,
+    "name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA Ribby",
+    "image": "https://static.wikia.nocookie.net/mob-psycho-100/images/a/a6/Ritsu_anime.png/revision/latest/scale-to-width-down/150?cb=20160712054631",
+    "phone": "0000000000",
+    "email": "rkageyama@hotmail.horse",
+    "dob": "03/04/1989"
   }
   
 ]

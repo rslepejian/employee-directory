@@ -6,24 +6,32 @@ import employeeListImport from "./employeeList.json";
 
 function App() {
 
-  const [DeveloperState, setDeveloperState] = useState({
+  const [developerState, setDeveloperState] = useState({
     employeeList: employeeListImport
   });
 
   function sortByName() {
-
+    var tempArray = developerState.employeeList;
+    tempArray.sort((a,b) => (a.name > b.name) ? 1: -1);
+    setDeveloperState({ ...developerState, employeeList: tempArray });
   }
 
   function sortByPhone() {
-
+    var tempArray = developerState.employeeList;
+    tempArray.sort((a,b) => (a.phone > b.phone) ? 1: -1);
+    setDeveloperState({ ...developerState, employeeList: tempArray });
   }
 
   function sortByEmail() {
-
+    var tempArray = developerState.employeeList;
+    tempArray.sort((a,b) => (a.email > b.email) ? 1: -1);
+    setDeveloperState({ ...developerState, employeeList: tempArray });
   }
 
   function sortByDOB() {
-    
+    var tempArray = developerState.employeeList;
+    tempArray.sort((a,b) => (a.dob > b.dob) ? 1: -1);
+    setDeveloperState({ ...developerState, employeeList: tempArray });
   }
 
   return (
@@ -31,18 +39,23 @@ function App() {
       <Header />
 
       <table>
-        <tr>
-          <th>Image</th>
-          <th onClick = {() => sortByName()}>Name</th>
-          <th onClick = {() => sortByPhone()}>Phone</th>
-          <th onClick = {() => sortByEmail()}>Email</th>
-          <th onClick = {() => sortByDOB()}>DOB</th>
-        </tr>
-        {DeveloperState.employeeList.map(employee => (
-          <EmployeeRow
-            employee={employee}
-          />
-        ))}
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th onClick={(event) => { event.preventDefault(); sortByName(); }}>Name</th>
+            <th onClick={(event) => { event.preventDefault(); sortByPhone(); }}>Phone</th>
+            <th onClick={(event) => { event.preventDefault(); sortByEmail(); }}>Email</th>
+            <th onClick={(event) => { event.preventDefault(); sortByDOB(); }}>DOB</th>
+          </tr>
+        </thead>
+        <tbody>
+          {developerState.employeeList.map(employee => (
+            <EmployeeRow
+              employee={employee}
+              key={employee.id}
+            />
+          ))}
+        </tbody>
       </table>
     </div>
   );
