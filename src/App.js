@@ -2,12 +2,14 @@ import './App.css';
 import React, { useState, useEffect } from "react";
 import EmployeeRow from "./components/employeeRow";
 import Header from "./components/header";
+import Search from "./components/search";
 import API from "./utils/API";
 
 function App() {
 
   const [developerState, setDeveloperState] = useState({
-    employeeList: []
+    employeeList: [],
+    search: ""
   });
 
   useEffect(() => {
@@ -18,10 +20,16 @@ function App() {
     API.getLanguagesList()
       .then(languages => {
         API.getUsersByLanguage(languages[0]).then((users) => {
-          setDeveloperState({employeeList : users});
+          setDeveloperState({...developerState, employeeList : users});
         });
       })
       .catch(err => console.log(err));
+  }
+
+
+  function parentHandleChange(searched) {
+    setDeveloperState({...developerState, search: searched});
+    
   }
 
   function sortByName() {
@@ -51,6 +59,8 @@ function App() {
   return (
     <div className="App">
       <Header />
+
+      <Search handleChange = {parentHandleChange}/>
 
       <table>
         <thead>
