@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, { useState } from "react";
 import EmployeeRow from "./components/employeeRow";
 import Header from "./components/header";
 import labelRow from "./components/labelRow";
@@ -18,12 +18,10 @@ function App() {
       <Header />
       <labelRow />
       {DeveloperState.employeeList.map(employee => (
-            <div className="col-md-3">
-              <EmployeeRow
-                employee = {employee}
-              />
-            </div>
-          ))}
+        <EmployeeRow
+          employee={employee}
+        />
+      ))}
     </div>
   );
 }

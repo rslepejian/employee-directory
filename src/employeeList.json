@@ -2,15 +2,17 @@
   {
     "id": 1,
     "name": "Kageyama Shigeo",
-    "image": "#",
+    "image": "https://static.wikia.nocookie.net/mob-psycho-100/images/c/c9/Mobsquare.png/revision/latest/scale-to-width-down/150?cb=20191121172143",
     "phone": "0000000000",
+    "email": "skageyama@hotmail.horse",
     "dob": "01/02/1990"
   },
   {
     "id": 2,
     "name": "Kageyama Ritsu",
-    "image": "#",
+    "image": "https://static.wikia.nocookie.net/mob-psycho-100/images/a/a6/Ritsu_anime.png/revision/latest/scale-to-width-down/150?cb=20160712054631",
     "phone": "0000000000",
+    "email": "rkageyama@hotmail.horse",
     "dob": "03/04/1989"
   }
   
