@@ -8,6 +8,7 @@ function Search({handleChange}) {
         <div className="row">
             <label htmlFor="employeeSearch" className="form-label">Search Employees</label>
             <input className="form-control"id="employeeSearch" placeholder="Type to search..." onChange={(event) => {
+                event.preventDefault();
                 const newSearch = event.target.value;
                 setSearch(newSearch);
                 handleChange(newSearch);

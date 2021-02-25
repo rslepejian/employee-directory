@@ -21,7 +21,8 @@ export default {
             phone: user.phone,
             email: user.email,
             image: user.picture.large,
-            dob: user.dob.date
+            dob: user.dob.date,
+            last: user.name.last
           };
         });
         resolve(results);

@@ -6,7 +6,6 @@ import Search from "./components/search";
 import API from "./utils/API";
 
 function App() {
-
   const [developerState, setDeveloperState] = useState({
     employeeList: [],
     search: ""
@@ -20,16 +19,23 @@ function App() {
     API.getLanguagesList()
       .then(languages => {
         API.getUsersByLanguage(languages[0]).then((users) => {
-          setDeveloperState({...developerState, employeeList : users});
+          setDeveloperState({ ...developerState, employeeList: users });
         });
       })
       .catch(err => console.log(err));
   }
 
-
   function parentHandleChange(searched) {
-    setDeveloperState({...developerState, search: searched});
-    
+    setDeveloperState({ ...developerState, search: searched });
+  }
+
+  function filterer(employee){
+    if (employee.name.toLowerCase().includes(developerState.search.toLowerCase())) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
   function sortByName() {
@@ -60,7 +66,7 @@ function App() {
     <div className="App">
       <Header />
 
-      <Search handleChange = {parentHandleChange}/>
+      <Search handleChange={parentHandleChange} />
 
       <table>
         <thead>
@@ -73,7 +79,7 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {developerState.employeeList.map(employee => (
+          {developerState.employeeList.filter(filterer).map(employee => (
             <EmployeeRow
               employee={employee}
               key={employee.id}
