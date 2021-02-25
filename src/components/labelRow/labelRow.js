@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function header() {
+function labelRow(props) {
   return (
     <div className = "row">
       
@@ -9,4 +9,4 @@ function header() {
   );
 }
 
-export default header;
+export default labelRow;
